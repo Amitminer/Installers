@@ -1,0 +1,18 @@
+name: Bash Syntax Check
+
+on:
+  push:
+    branches:
+      - dev # You can change this to your default branch name
+
+jobs:
+  syntax-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Run Bash syntax check
+        working-directory: ./installers
+        run: find . -name '*.sh' -print0 | xargs -0 -n1 bash -n
+        
