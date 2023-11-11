@@ -2,29 +2,11 @@
 
 # Installers
 
-This repository provides convenient one-command installers for specific software on Android devices using Termux.
+Simplify the installation of essential software on your Android device using Termux with these convenient one-command installers.
 
 ## Prerequisites
 
 Make sure you have [Termux](https://termux.com/) installed on your Android device.
-
-## Available Installers
-
-### 1. Kali Linux Installer
-
-Install Kali Linux on your Android device.
-
-```bash
-bash kali-linux.sh
-```
-
-### 2. Pocketmine-MP Installer
-
-Install Pocketmine-MP server on your Android device.
-
-```bash
-bash pocketmine-mp.sh
-```
 
 ## How to Use
 
@@ -40,26 +22,27 @@ bash pocketmine-mp.sh
     cd Installers
     ```
 
-3. Run the desired installer using the specified command.
-
-   For example, to install Kali Linux:
+3. Give executable permission to the installer.
 
     ```bash
-    bash kali-linux.sh
+    chmod +x install.sh
     ```
 
-   Or to install Pocketmine-MP:
+4. Run the installer.
 
     ```bash
-    bash pocketmine-mp.sh
+    bash install.sh
     ```
+
+5. The installer will prompt you to choose what to install. Enter the desired option or `0` to exit.
+
 ## Contributing
 
 Contributions are welcome! If you have suggestions, feature requests, or bug reports, please open an issue or create a pull request.
 
 ## Support
 
-If you need help with this plugin or want to report a bug, please create a new issue on the GitHub repository.
+If you need help with this installer or want to report a bug, please create a new issue on the GitHub repository.
 
 ## Issues or Questions
 
@@ -69,7 +52,7 @@ Encountered a problem or have a question? We're here to help!
 
 * **Contact Me on Discord:** Feel free to reach out to me directly on Discord.
   * **Username:** [Amit_xD](https://discord.com/users/814660125511778315)
-  
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -8,14 +8,15 @@ RESET='\033[0m'
 INSTALL_DIR="./pmmp"  # Set the installation directory
 
 check_installation() {
-    if ! command -v wget &> /dev/null; then
-        echo -e "${RED}wget is not installed. Installing...${RESET}"
-        apt-get update
-        apt-get install wget -y
-    elif ! command -v curl &> /dev/null; then
-        echo -e "${RED}curl is not installed. Installing...${RESET}"
-        apt-get install curl -y
-    fi
+    dependencies=("wget" "curl" "jq")
+
+    for dep in "${dependencies[@]}"; do
+        if ! command -v "$dep" &> /dev/null; then
+            echo -e "${RED}$dep is not installed. Installing...${RESET}"
+            apt-get update
+            apt-get install "$dep" -y
+        fi
+    done
 }
 
 get_latest_build_data() {
